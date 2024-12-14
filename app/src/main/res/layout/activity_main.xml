@@ -10,25 +10,31 @@
     <ImageView
         android:id="@+id/myImageView"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/flStart"
+        android:contentDescription="start image"
+        android:src="@drawable/img_main_page"
         android:layout_width="match_parent"
         android:layout_height="220dp"/>
     
     <FrameLayout
         android:id="@+id/flStart"
-        app:layout_constraintTop_toTopOf="@id/myImageView"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="150dp"
-        android:layout_height="150dp"/>
+        android:layout_height="150dp"
+        android:background="@drawable/item_color_accent_border_ripple_background">
+
         <TextView
+            android:id="@+id/startView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="START"
-            android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
             android:textSize="@dimen/default_button_text_size"
             android:textStyle="bold"
             />
-
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
